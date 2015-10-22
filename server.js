@@ -18,7 +18,7 @@ app.use('/js', express.static(__dirname + '/js'));
 // set the home page route
 app.get('/', function(req, res) {
 
-    // ejs render automatically looks in the views folder
+    // ejs render automatically looks in the views 
     res.render('index');
 });
 
