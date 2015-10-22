@@ -1,5 +1,5 @@
 {
-  "base": "public/semantic/",
+  "base": "semantic/",
   "paths": {
     "source": {
       "config": "src/theme.config",
@@ -13,7 +13,7 @@
       "compressed": "dist/components/",
       "themes": "dist/themes/"
     },
-    "clean": "public/dist/"
+    "clean": "dist/"
   },
   "permission": false,
   "rtl": false,
