@@ -2,34 +2,34 @@
             Set-up
 *******************************/
 
-var semanticBuild = require('./semantic/tasks/build');
-
 var
   gulp         = require('gulp-help')(require('gulp')),
 
   // read user config to know what task to load
-  config       = require('./tasks/config/user'),
+  config       = require('./semantic/tasks/config/user'),
 
   // watch changes
-  watch        = require('./tasks/watch'),
+  watch        = require('./semantic/tasks/watch'),
 
   // build all files
-  build        = require('./tasks/build'),
-  buildJS      = require('./tasks/build/javascript'),
-  buildCSS     = require('./tasks/build/css'),
-  buildAssets  = require('./tasks/build/assets'),
+  build        = require('./semantic/tasks/build'),
+  buildJS      = require('./semantic/tasks/build/javascript'),
+  buildCSS     = require('./semantic/tasks/build/css'),
+  buildAssets  = require('./semantic/tasks/build/assets'),
 
   // utility
-  clean        = require('./tasks/clean'),
-  version      = require('./tasks/version'),
+  clean        = require('./semantic/tasks/clean'),
+  version      = require('./semantic/tasks/version'),
 
   // docs tasks
-  serveDocs    = require('./tasks/docs/serve'),
-  buildDocs    = require('./tasks/docs/build'),
+  serveDocs    = require('./semantic/tasks/docs/serve'),
+  buildDocs    = require('./semantic/tasks/docs/build'),
 
   // rtl
-  buildRTL     = require('./tasks/rtl/build'),
-  watchRTL     = require('./tasks/rtl/watch')
+  buildRTL     = require('./semantic/tasks/rtl/build'),
+  watchRTL     = require('./semantic/tasks/rtl/watch'),
+
+  semanticBuild = require('./semantic/tasks/build')
 ;
 
 
