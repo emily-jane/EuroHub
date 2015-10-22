@@ -2,6 +2,8 @@
             Set-up
 *******************************/
 
+var semanticBuild = require('./semantic/tasks/build');
+
 var
   gulp         = require('gulp-help')(require('gulp')),
 
@@ -48,6 +50,8 @@ gulp.task('build-assets', 'Copies all assets from source', buildAssets);
 
 gulp.task('clean', 'Clean dist folder', clean);
 gulp.task('version', 'Displays current version of Semantic', version);
+
+gulp.task('semantic', semanticBuild);
 
 /*--------------
       Docs
