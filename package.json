@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "postinstall": "bower install && cd public/semantic && cd ../.."
+    "postinstall": "cd public/semantic",
+    "postinstall": "gulp build",
+    "postinstall": "cd ../..",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
