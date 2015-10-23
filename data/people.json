@@ -9,7 +9,7 @@
     "email":"asmith@euromoneyplc.com",
     "phone_number":"02079971111",
     "desk":"1-11",
-    "floorplan":"data/images/floorplans/floorplan_1.jpg",
+    "floorplan":"data/images/floorplans/floorplan_1.png",
     "location":"London",
     "business":"Global Capital"
   },
@@ -23,7 +23,7 @@
     "email":"ajones@euromoneyplc.com",
     "phone_number":"02079972222",
     "desk":"G-23",
-    "floorplan":"data/images/floorplans/floorplan_2.jpg",
+    "floorplan":"data/images/floorplans/floorplan_2.png",
     "location":"New York",
     "business":"Metal Bulletin"
   },
@@ -37,7 +37,7 @@
     "email":"aclark@euromoneyplc.com",
     "phone_number":"02079973333",
     "desk":"2-16",
-    "floorplan":"data/images/floorplans/floorplan_3.jpg",
+    "floorplan":"data/images/floorplans/floorplan_3.png",
     "location":"Hong Kong",
     "business":"Global Capital"
   },
@@ -51,7 +51,7 @@
     "email":"mgreen@euromoneyplc.com",
     "phone_number":"02079974444",
     "desk":"C-12",
-    "floorplan":"data/images/floorplans/floorplan_4.jpg",
+    "floorplan":"data/images/floorplans/floorplan_4.png",
     "location":"London",
     "business":"Global Capital"
   },
@@ -65,7 +65,7 @@
     "email":"jbrown@euromoneyplc.com",
     "phone_number":"02079975555",
     "desk":"B-42",
-    "floorplan":"data/images/floorplans/floorplan_4.jpg",
+    "floorplan":"data/images/floorplans/floorplan_4.png",
     "location":"New York",
     "business":"TelCap"
   },
@@ -79,7 +79,7 @@
     "email":"bgates@euromoneyplc.com",
     "phone_number":"02079976666",
     "desk":"2-13",
-    "floorplan":"data/images/floorplans/floorplan_5.jpg",
+    "floorplan":"data/images/floorplans/floorplan_5.png",
     "location":"London",
     "business":"TelCap"
   },
@@ -93,7 +93,7 @@
     "email":"cc@euromoneyplc.com",
     "phone_number":"0207997777",
     "desk":"W-14",
-    "floorplan":"data/images/floorplans/floorplan_2.jpg",
+    "floorplan":"data/images/floorplans/floorplan_2.png",
     "location":"London",
     "business":"Metal Bulletin"
   },
@@ -107,7 +107,7 @@
     "email":"jgreen@euromoneyplc.com",
     "phone_number":"0207998888",
     "desk":"A-88",
-    "floorplan":"data/images/floorplans/floorplan_2.jpg",
+    "floorplan":"data/images/floorplans/floorplan_2.png",
     "location":"New York",
     "business":"Global Capital"
   },
@@ -121,7 +121,7 @@
     "email":"jgreen@euromoneyplc.com",
     "phone_number":"0207999999",
     "desk":"A-88",
-    "floorplan":"data/images/floorplans/floorplan_5.jpg",
+    "floorplan":"data/images/floorplans/floorplan_5.png",
     "location":"New York",
     "business":"Global Capital"
   },
@@ -135,7 +135,7 @@
     "email":"sgreen@euromoneyplc.com",
     "phone_number":"0207991010",
     "desk":"A-88",
-    "floorplan":"data/images/floorplans/floorplan_1.jpg",
+    "floorplan":"data/images/floorplans/floorplan_1.png",
     "location":"New York",
     "business":"Global Capital"
   }
