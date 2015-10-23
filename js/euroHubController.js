@@ -2,8 +2,10 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
 
   $scope.test = "Hello world!"
 
+  $scope.searchPeople = function() {
+    
+  }
 
-  console.log(hubSearchFactory.people());
-
+  console.log(hubSearchFactory.documents());
 
 }]);

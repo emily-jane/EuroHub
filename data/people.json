@@ -9,7 +9,8 @@
     "email":"asmith@euromoneyplc.com",
     "phone_number":"02079971111",
     "desk":"1-11",
-    "location":"London"
+    "location":"London",
+    "business":""
   },
     {
     "first_name":"Alexander",
@@ -21,7 +22,8 @@
     "email":"ajones@euromoneyplc.com",
     "phone_number":"02079972222",
     "desk":"G-23",
-    "location":"New York"
+    "location":"New York",
+    "business":""
   },
     {
     "first_name":"Alex",
@@ -33,6 +35,7 @@
     "email":"aclark@euromoneyplc.com",
     "phone_number":"02079973333",
     "desk":"5-16",
-    "location":"Hong Kong"
+    "location":"Hong Kong",
+    "business":""
   }
 ]
