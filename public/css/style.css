@@ -13,10 +13,15 @@
   font-size: 20px;
   background-color: #2C3E50;
   padding: none;
+  z-index: 1;
 
 }
 
 a .footer.form-page{
   padding: 10px;
   color: #FF530F;
+}
+.column {
+  border-style: solid;
+  border-color: black;
 }
