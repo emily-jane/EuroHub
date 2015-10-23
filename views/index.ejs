@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" ng-app="EuroHub">
+
 <head>
   <meta charset="utf-8">
   <title>EuroHub</title>
@@ -15,6 +16,26 @@
 </head>
 
 <body ng-controller="EuroHubController as ctrl">
+  <div class="ui menu">
+    <div class="ui compact menu">
+      <div class="ui simple dropdown item">
+        Filter
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">People</div>
+          <div class="item">Documents</div>
+          <div class="item">Businesses</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui category search item">
+      <div class="ui transparent icon input">
+        <input class="prompt" type="text" placeholder="Query the hub...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+
   <button class="ui button" ng-click="searchType('people')">Type!</button>
   <button class="ui button" ng-click="search('Facilities')">Search!</button>
 
@@ -127,25 +148,6 @@
     </div>
   </div>
 
-  <div class="ui menu">
-    <div class="ui compact menu">
-      <div class="ui simple dropdown item">
-        Filter
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">People</div>
-          <div class="item">Documents</div>
-          <div class="item">Businesses</div>
-        </div>
-      </div>
-    </div>
-    <div class="ui category search item">
-      <div class="ui transparent icon input">
-        <input class="prompt" type="text" placeholder="Query the hub...">
-        <i class="search link icon"></i>
-      </div>
-    </div>
-  </div>
   <div class="ui inverted vertical footer segment form-page">
     <div class="ui menu footer">
       <div class="header item">
