@@ -1,0 +1,26 @@
+[
+  {
+    "search_terms":["holiday", "absence", "leave", "annual"],
+    "file_path":"data/documents/HR/1",
+    "author":"John Smith",
+    "published_date":"01/01/2013",
+    "department":"HR",
+    "thumbnail_image":"data/images/documents/1"
+  },
+    {
+    "search_terms":["expenses", "travel", "food"],
+    "file_path":"data/documents/Finance/1",
+    "author":"John Doe",
+    "published_date":"02/02/2014",
+    "department":"Finance",
+    "thumbnail_image":"data/images/documents/2"
+  },
+    {
+    "search_terms":["cycle", "bike", "scheme", "benefits"],
+    "file_path":"data/documents/HR/2",
+    "author":"John Clark",
+    "published_date":"03/03/2015",
+    "department":"HR",
+    "thumbnail_image":"data/images/documents/3"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "first_name":,
+    "last_name":,
+    "image":,
+    "job_title":,
+    "department":,
+    "skills":[],
+    "email":,
+    "phone_number":,
+    "desk":,
+    "location":
+  },
+  {
+    "search_terms":[],
+    "file_path":,
+    "author":,
+    "published_date":,
+    "department":,
+    "thumbnail_image":
+  }
+]
