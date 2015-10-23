@@ -1,5 +1,6 @@
 [
   {
+    "type": "document",
     "title": "Holiday request form",
     "search_terms":["holiday", "absence", "leave", "annual"],
     "file_path":"data/images/documents/HR/HolidayRequestForm.docx",
@@ -10,6 +11,7 @@
     "thumbnail_image":"data/images/documents/3"
   },
   {
+    "type": "document",
     "title": "Health and Safety policy",
     "search_terms":["company", "health", "safety"],
     "file_path":"data/images/documents/HR/HealthSafetyInfo.html",
@@ -20,6 +22,7 @@
     "thumbnail_image":"data/images/documents/3"
   },
   {
+    "type": "document",
     "title": "Expense claim form",
     "search_terms":["expenses", "travel", "food"],
     "file_path":"data/documents/Finance/ExpenseClaimForm.xls",
@@ -30,6 +33,7 @@
     "thumbnail_image":"data/images/documents/3"
   },
   {
+    "type": "document",
     "title":"Cycle to work scheme information",
     "search_terms":["cycle", "bike", "scheme", "benefits"],
     "file_path":"data/documents/HR/Ride2WorkGuidance.pdf",
