@@ -32,4 +32,15 @@
     "cost_centre":"MEM",
     "logo":"data/images/business/gc.jpeg"
   },
+  {
+    "name":"Specialist Finance Events",
+    "director":"Luke Gibson",
+    "location":"8 Bouverie Street, London, EC4Y",
+    "sector":"Finance",
+    "no_employees":"50",
+    "twitter_link":"@euromoney",
+    "website":"http://www.euromoneyseminars.com",
+    "cost_centre":"SFE",
+    "logo":"data/images/business/sfe.jpg"
+  },
 ]
