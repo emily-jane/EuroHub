@@ -12,12 +12,11 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
     $scope.searchResults = [];
     for ( var i = 0; i < $scope.searchList.length; i++ ) {
       $.each($scope.searchList[i], function(key, value) {
-        if ($scope.arrayCheck(value) && ($.inArray(searchTerm, value))) {
+        if ($scope.arrayCheck(value) && $.inArray(searchTerm, value) !== -1) {
             $scope.searchResults.push($scope.searchList[i]);
-            console.log($scope.searchResults);
-        } else if ($scope.stringCheck(value) && (value === searchTerm)) {
+        }
+        else if ($scope.stringCheck(value) && (value === searchTerm)) {
           $scope.searchResults.push($scope.searchList[i]);
-          // console.log($scope.searchResults);
         }
       })
     }
