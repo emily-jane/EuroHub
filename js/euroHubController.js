@@ -9,19 +9,15 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
   };
 
   $scope.search = function(searchTerm) {
-    $scope.options = [];
+    $scope.searchResults = [];
     for ( var i = 0; i < $scope.searchList.length; i++ ) {
       $.each($scope.searchList[i], function(key, value) {
-        if ($scope.arrayCheck(value)) {
-          if ($.inArray(searchTerm, value)) {
-            $scope.options.push($scope.searchList[i]);
-            // console.log($scope.options);
-          }
-        } else if ($scope.stringCheck(value)) {
-          if (value === searchTerm) {
-            $scope.options.push($scope.searchList[i]);
-            console.log($scope.options);
-          }
+        if ($scope.arrayCheck(value) && ($.inArray(searchTerm, value))) {
+            $scope.searchResults.push($scope.searchList[i]);
+            console.log($scope.searchResults);
+        } else if ($scope.stringCheck(value) && (value === searchTerm)) {
+          $scope.searchResults.push($scope.searchList[i]);
+          // console.log($scope.searchResults);
         }
       })
     }
