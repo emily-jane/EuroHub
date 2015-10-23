@@ -1,5 +1,9 @@
-euroHubModule.controller('EuroHubController', ['$scope', function($scope) {
+euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', function($scope, hubSearchFactory) {
 
   $scope.test = "Hello world!"
+
+
+  console.log(hubSearchFactory.people());
+
 
 }]);
