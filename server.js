@@ -13,6 +13,8 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
+app.use('/data', express.static(__dirname + '/data'));
+
 app.use('/assets', express.static(__dirname + '/assets'));
 
 app.use('/js', express.static(__dirname + '/js'));
@@ -20,7 +22,7 @@ app.use('/js', express.static(__dirname + '/js'));
 // set the home page route
 app.get('/', function(req, res) {
 
-    // ejs render automatically looks in the views 
+    // ejs render automatically looks in the views
     res.render('index');
 });
 

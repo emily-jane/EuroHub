@@ -1,0 +1,41 @@
+[
+  {
+    "first_name":"Alex",
+    "last_name":"Smith",
+    "image":"data/images/people/1",
+    "job_title":"Developer",
+    "department":"Tech",
+    "skills":["C#", ".NET", "Javascript", "AngularJS", "Agile"],
+    "email":"asmith@euromoneyplc.com",
+    "phone_number":"02079971111",
+    "desk":"1-11",
+    "location":"London",
+    "business":""
+  },
+    {
+    "first_name":"Alexander",
+    "last_name":"Jones",
+    "image":"data/images/people/2",
+    "job_title":"Facilities Manager",
+    "department":"Facilities",
+    "skills":["First Aid", "Health & Safety", "Health and Safety", "Fire Marshal"],
+    "email":"ajones@euromoneyplc.com",
+    "phone_number":"02079972222",
+    "desk":"G-23",
+    "location":"New York",
+    "business":""
+  },
+    {
+    "first_name":"Alex",
+    "last_name":"Clark",
+    "image":"data/images/people/3",
+    "job_title":"HR Advisor",
+    "department":"HR",
+    "skills":["Excel", "VBA", "Holiday", "Advice"],
+    "email":"aclark@euromoneyplc.com",
+    "phone_number":"02079973333",
+    "desk":"5-16",
+    "location":"Hong Kong",
+    "business":""
+  }
+]
