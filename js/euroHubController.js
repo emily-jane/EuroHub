@@ -40,4 +40,11 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
     searchType();
   })
 
+  $scope.floorplanImage = "assets/images/euro-money.png";
+
+  $scope.openImage = function(location){
+    $scope.floorplanImage = location;
+    console.log("Image clicked!")
+  }
+
 }]);

@@ -35,7 +35,7 @@
       </div>
 
       <div class="ui stackable cards" ng-repeat="result in searchResults">
-        <div class="ui link green fluid card people" ng-if="result.type === 'person'">
+        <div class="ui link green fluid card people" ng-click="openImage(result.floorplan)" ng-if="result.type === 'person'">
           <div class="content">
             <img class="right floated tiny ui image" src="{{ result.image }}">
             <div class="header">{{ result.first_name }} {{ result.last_name }}</div>
@@ -128,14 +128,7 @@
       <div class="ui fluid card">
         <div class="content">
           <h2 class="ui header">Test Document</h2>
-          <p>Lorem ipsum dolor sit amet, duo ridens euripidis conclusionemque in, eu ius tincidunt necessitatibus, facete interesset sea at. Vim perfecto contentiones ea, no malorum disputando omittantur sed. Sit et dicta aliquam laoreet, minimum accusata
-            ea quo. Eum ei falli invidunt, vix invidunt electram at. Vix alia denique appellantur te. Movet propriae in sea, mutat reque doming pri at. Ex quaeque theophrastus est, rebum detracto hendrerit eu eum. Omnium integre evertitur eos an. Id his
-            nonumy eripuit. Ne has invenire pertinacia scripserit, vix at etiam decore convenire. Ludus honestatis inciderint eos cu, et melius reprimique quaerendum sit. Quo vide libris posidonium ut, eos ridens voluptatum ex, at pro volutpat imperdiet.
-            Eum postea posidonium repudiandae ea, esse postea persecuti et mel. Vel ei ancillae interesset, reque dicam ad mel, accusam cotidieque mei in.</p>
-          <p>Lorem ipsum dolor sit amet, duo ridens euripidis conclusionemque in, eu ius tincidunt necessitatibus, facete interesset sea at. Vim perfecto contentiones ea, no malorum disputando omittantur sed. Sit et dicta aliquam laoreet, minimum accusata
-            ea quo. Eum ei falli invidunt, vix invidunt electram at. Vix alia denique appellantur te. Movet propriae in sea, mutat reque doming pri at. Ex quaeque theophrastus est, rebum detracto hendrerit eu eum. Omnium integre evertitur eos an. Id his
-            nonumy eripuit. Ne has invenire pertinacia scripserit, vix at etiam decore convenire. Ludus honestatis inciderint eos cu, et melius reprimique quaerendum sit. Quo vide libris posidonium ut, eos ridens voluptatum ex, at pro volutpat imperdiet.
-            Eum postea posidonium repudiandae ea, esse postea persecuti et mel. Vel ei ancillae interesset, reque dicam ad mel, accusam cotidieque mei in.</p>
+          <img src="{{ floorplanImage }}" alt="euro hub logo" style="width:100%;height:100%">
         </div>
       </div>
     </div>
