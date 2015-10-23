@@ -3,5 +3,24 @@
   border-color: black;
 }
 
-.card {
+.ui .menu.footer{
+  background-color: #2C3E50;
+}
+.ui.inverted.segment{
+    background-color: #2C3E50;
+    padding: 0px;
+}
+
+.footer.form-page {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 20px;
+  background-color: #2C3E50;
+  padding: none;
+}
+
+a .footer.form-page{
+  padding: 10px;
+  color: #FF530F;
 }
