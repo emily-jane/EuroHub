@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>EuroHub</title>
     <link rel="stylesheet" type="text/css" href="assets/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -13,7 +14,39 @@
   </head>
 
   <body ng-controller="EuroHubController as ctrl">
-    <button class="ui button">Testing!</button>
-    <p>{{ test }}</p>
+    <div class="ui menu">
+      <div class="ui compact menu">
+        <div class="ui simple dropdown item">
+          Filter
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">People</div>
+            <div class="item">Documents</div>
+            <div class="item">Businesses</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui category search item">
+        <div class="ui transparent icon input">
+          <input class="prompt" type="text" placeholder="Query the hub...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="ui inverted vertical footer segment form-page">
+        <div class="ui menu footer">
+          <div class="header item">
+            <img src="assets/images/euro-money.png" alt="euro hub logo" style="width:140px;height:60px;">
+          </div>
+          <a class="item">
+            <a class="item">Email</a>
+          </a>
+          <a class="item">
+            <a class="item">Chat</a>
+          </a>
+          <a class="item">
+            <a class="item">Skype</a>
+          </a>
+        </div>
   </body>
 </html>
