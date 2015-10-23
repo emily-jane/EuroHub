@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en" ng-app="EuroHub">
-
 <head>
   <meta charset="utf-8">
   <title>EuroHub</title>
@@ -16,6 +15,8 @@
 </head>
 
 <body ng-controller="EuroHubController as ctrl">
+  <button class="ui button" ng-click="searchType('people')">Type!</button>
+  <button class="ui button" ng-click="search('Facilities')">Search!</button>
 
   <div class="ui grid">
     <div class="six wide column">
