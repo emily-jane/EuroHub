@@ -41,29 +41,35 @@
     <div class="six wide column">
       <div class="ui cards">
 
-        <div class="ui link green centered card people">
-          <div class="content">
-            <img class="right floated tiny ui image" src="assets/images/people/4.jpg">
-            <div class="header">Kristy Hackathon</div>
-            <div class="meta">
-              <p class="department">Marketing Dept.</p>
-              <p class="business">Metal Bulletin</p>
-              <p class="phone">020 8123 4567</p>
-            </div>
-            <div class="skills">
-              <i class="badge fa fa-html5"></i>
-              <i class="badge fa fa-android"></i>
-              <i class="badge fa fa-fire-extinguisher"></i>
-            </div>
-          </div>
-        </div>
+
+          <ul>
+            <li ng-repeat="result in searchResults">
+              <div class="ui link green centered card people">
+                <div class="content">
+                  <img class="right floated tiny ui image" src="{{ result.image }}" >
+                  <div class="header">{{ result.first_name }} {{ result.last_name }}</div>
+                  <div class="meta">
+                    <p class="department">{{ result.department }}</p>
+                    <p class="business">{{ result.business }}</p>
+                    <p class="phone">{{ result.phone_number }}</p>
+                  </div>
+                  <div class="skills">
+                    <i class="badge fa fa-html5"></i>
+                    <i class="badge fa fa-android"></i>
+                    <i class="badge fa fa-fire-extinguisher"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
 
         <div class="ui green centered card people">
           <div class="image">
             <img src="assets/images/people/4.jpg">
           </div>
           <div class="content">
-            <div class="header">Kristy Hackathon</div>
+            <div class="header">Kirsty Hacky</div>
             <div class="meta">
               <span class="department">Marketing Dept.</span>
               <span class="business right floated">Metal Bulletin</span>
@@ -75,6 +81,8 @@
               <i class="badge fa fa-fire-extinguisher"></i>
             </div>
           </div>
+
+
           <div class="extra content">
             <div class="ui three buttons">
               <div class="ui basic red button">Email</div>

@@ -2,7 +2,7 @@
   {
     "first_name":"Alex",
     "last_name":"Smith",
-    "image":"data/images/people/1.jpg",
+    "image":"assets/images/people/1.jpg",
     "job_title":"Developer",
     "department":"Tech",
     "skills":["C#", ".NET", "Javascript", "AngularJS", "Agile"],
@@ -15,7 +15,7 @@
     {
     "first_name":"Alexander",
     "last_name":"Jones",
-    "image":"data/images/people/2.jpeg",
+    "image":"assets/images/people/2.jpg",
     "job_title":"Facilities Manager",
     "department":"Facilities",
     "skills":["First Aid", "Health & Safety", "Health and Safety", "Fire Marshal"],
@@ -28,7 +28,7 @@
     {
     "first_name":"Alex",
     "last_name":"Clark",
-    "image":"data/images/people/3.jpeg",
+    "image":"assets/images/people/3.jpg",
     "job_title":"HR Advisor",
     "department":"HR",
     "skills":["Excel", "VBA", "Holiday", "Advice"],
@@ -41,7 +41,7 @@
     {
     "first_name":"Mary",
     "last_name":"Green",
-    "image":"data/images/people/4.jpeg",
+    "image":"assets/images/people/4.jpg",
     "job_title":"Finance Director",
     "department":"Finance",
     "skills":["Excel", "Forcasting", "Accountancy", "Management"],
@@ -54,7 +54,7 @@
   {
     "first_name":"Jenny",
     "last_name":"Brown",
-    "image":"data/images/people/5.jpeg",
+    "image":"assets/images/people/5.jpg",
     "job_title":"Sales Manager",
     "department":"Sales",
     "skills":["Sales Training", "Management", "SalesForce"],
@@ -67,7 +67,7 @@
   {
     "first_name":"Bill",
     "last_name":"Gates",
-    "image":"data/images/people/6.jpeg",
+    "image":"assets/images/people/6.jpg",
     "job_title":"Sub-editor",
     "department":"Editorial",
     "skills":["InDesign", "MS Word"],
@@ -80,7 +80,7 @@
   {
     "first_name":"Camilla",
     "last_name":"Cornwall",
-    "image":"data/images/people/7.jpeg",
+    "image":"assets/images/people/7.jpg",
     "job_title":"QA Manager",
     "department":"Technology",
     "skills":["Automated testing","Selenium", "Protractor"],
@@ -93,8 +93,8 @@
   {
     "first_name":"Jane",
     "last_name":"Green",
-    "image":"data/images/people/8.jpeg",
-    "job_title":"Database Administrator",
+    "image":"assets/images/people/8.jpg",
+    "job_title":"assetsbase Administrator",
     "department":"Technology",
     "skills":["SQL","SQL Server", "Oracle", "MongoDB", "NoSQL"],
     "email":"jgreen@euromoneyplc.com",
@@ -106,7 +106,7 @@
   {
     "first_name":"Jack",
     "last_name":"Green",
-    "image":"data/images/people/9.jpeg",
+    "image":"assets/images/people/9.jpg",
     "job_title":"Reporter",
     "department":"Editorial",
     "skills":["SQL","SQL Server", "Oracle", "MongoDB", "NoSQL"],
@@ -119,7 +119,7 @@
   {
     "first_name":"Sally",
     "last_name":"Jones",
-    "image":"data/images/people/10.jpeg",
+    "image":"assets/images/people/10.jpg",
     "job_title":"Reporter",
     "department":"Editorial",
     "skills":["MS Word"],
