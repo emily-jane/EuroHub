@@ -40,11 +40,21 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
     searchType();
   })
 
-  $scope.floorplanImage = "assets/images/euro-money.png";
+// <img src="{{ rightPane }}" alt="euro hub logo" style="width:100%;height:100%">
+
+  $scope.rightPane = "assets/images/euro-money.png";
 
   $scope.openImage = function(location){
-    $scope.floorplanImage = location;
-    console.log("Image clicked!")
+    $scope.rightPane = location;
   }
+
+  $scope.documentClick = function(location, download){
+    if (download === false) {
+      $scope.rightPane = window.location.href + location;
+      console.log('clicked');
+    }
+  }
+
+
 
 }]);
