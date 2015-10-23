@@ -1,13 +1,35 @@
 [
   {
-    "name":,
-    "director":,
-    "location":,
-    "sector":,
-    "no_employees":,
-    "twitter_link":,
-    "website":,
-    "cost_centre":,
-    "logo":
-  }
+    "name":"Metal Bulletin",
+    "director":"Raju Daswani",
+    "location":"29 Ludgate Hill, London, EC4M",
+    "sector":"Metal commodities",
+    "no_employees":"150",
+    "twitter_link":"@metalbulletin",
+    "website":"http://www.metalbulletin.com",
+    "cost_centre":"MMM",
+    "logo":"data/images/business/mb.png"
+  },
+  {
+    "name":"TelCap",
+    "director":"Ros Irving",
+    "location":"8 Bouverie Street, London, EC4Y",
+    "sector":"Telecommunications",
+    "no_employees":"100",
+    "twitter_link":"@euromoney",
+    "website":"http://www.capacityconferences.com",
+    "cost_centre":"MTC",
+    "logo":"data/images/business/tc.jpeg"
+  },
+  {
+    "name":"Global Capital",
+    "director":"John Orchard",
+    "location":"8 Bouverie Street, London, EC4Y",
+    "sector":"Finance",
+    "no_employees":"200",
+    "twitter_link":"@euromoney",
+    "website":"http://www.globalcapital.com",
+    "cost_centre":"MEM",
+    "logo":"data/images/business/gc.jpeg"
+  },
 ]
