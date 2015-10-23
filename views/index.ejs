@@ -19,26 +19,23 @@
 <body ng-controller="EuroHubController as ctrl">
   <div class="ui menu">
     <div class="ui compact menu">
-      <div class="ui simple dropdown item">
-        Filter
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">People</div>
-          <div class="item">Documents</div>
-          <div class="item">Businesses</div>
-        </div>
-      </div>
+      <select ng-model='dropdown.value' class="ui dropdown">
+        <option value="">Filter</option>
+        <option value="people">People</option>
+        <option value="documents">Documents</option>
+        <option value="businesses">Businesses</option>
+      </select>
     </div>
     <div class="ui category search item">
       <div class="ui transparent icon input">
-        <input class="prompt" type="text" placeholder="Query the hub...">
+        <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub...">
         <i class="search link icon"></i>
       </div>
     </div>
   </div>
 
-  <button class="ui button" ng-click="searchType('people')">Type!</button>
-  <button class="ui button" ng-click="search('Oracle')">Search!</button>
+  <!-- <button class="ui button" ng-click="searchType('people')">Type!</button> -->
+  <button class="ui button" ng-click="search()">Search!</button>
 
   <div class="ui grid">
     <div class="six wide column">
