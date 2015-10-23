@@ -21,32 +21,29 @@
     <div class="six wide column">
       <div class="ui menu">
         <div class="ui compact menu">
-          <div class="ui simple dropdown item">
-            Filter
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item">People</div>
-              <div class="item">Documents</div>
-              <div class="item">Businesses</div>
-            </div>
-          </div>
+          <select ng-model='dropdown.value' class="ui dropdown">
+            <option value="">Filter</option>
+            <option value="people">People</option>
+            <option value="documents">Documents</option>
+            <option value="businesses">Businesses</option>
+          </select>
         </div>
         <div class="ui category search item">
           <div class="ui transparent icon input">
-            <input class="prompt" type="text" placeholder="Query the hub...">
-            <i class="fa fa-search"></i>
+            <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub...">
+            <i class="fa fa-search" ng-click="search()"></i>
           </div>
         </div>
       </div>
-      <div class="ui stackable cards">
-        <div class="ui link green fluid card people">
+      <div class="ui stackable cards" >
+        <div class="ui link green fluid card people" ng-repeat="result in searchResults">
           <div class="content">
-            <img class="right floated tiny ui image" src="assets/images/people/4.jpg">
-            <div class="header">Kristy Hackathon</div>
+            <img class="right floated tiny ui image" src="{{ result.image }}">
+            <div class="header">{{ result.first_name }} {{ result.last_name }}</div>
             <div class="meta">
-              <p class="department">Marketing Dept.</p>
-              <p class="business">Metal Bulletin</p>
-              <p class="phone">020 8123 4567</p>
+              <p class="department">{{ result.department }}</p>
+              <p class="business">{{ result.business }}</p>
+              <p class="phone">{{ result.phone_number }}</p>
             </div>
             <div class="skills">
               <i class="badge fa fa-html5"></i>
@@ -55,13 +52,12 @@
             </div>
           </div>
         </div>
-
         <div class="ui green fluid card people">
           <div class="image">
             <img class="big profile" src="assets/images/people/4.jpg">
           </div>
           <div class="content">
-            <div class="header">Kristy Hackathon</div>
+            <div class="header">Kirsty Hacky</div>
             <div class="meta">
               <span class="department">Marketing Dept.</span>
               <span class="business right floated">Metal Bulletin</span>
@@ -73,6 +69,8 @@
               <i class="badge fa fa-fire-extinguisher"></i>
             </div>
           </div>
+
+
           <div class="extra content">
             <div class="ui three buttons">
               <div class="ui basic red button">Email</div>

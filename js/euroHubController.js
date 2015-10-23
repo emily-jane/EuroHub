@@ -2,13 +2,14 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
 
   $scope.test = "Hello world!"
 
-  $scope.searchType = function(type) {
-    hubSearchFactory.searchType(type).then(function(res) {
-      $scope.searchList = res;
+  function searchType() {
+    hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
+       $scope.searchList = res;
     });
   };
 
-  $scope.search = function(searchTerm) {
+  $scope.search = function() {
+    var searchTerm = $scope.searchTerm;
     $scope.searchResults = [];
     for ( var i = 0; i < $scope.searchList.length; i++ ) {
       $.each($scope.searchList[i], function(key, value) {
@@ -33,4 +34,10 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
       return true;
     }
   }
+
+  $scope.$watch("dropdown.value", function(select){
+    $scope.searchCategory = select;
+    searchType();
+  })
+
 }]);
