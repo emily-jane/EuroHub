@@ -1,5 +1,6 @@
 [
   {
+    "type": "person",
     "first_name":,
     "last_name":,
     "image":,
@@ -12,6 +13,7 @@
     "location":
   },
   {
+    "type": "document",
     "search_terms":[],
     "file_path":,
     "author":,
@@ -20,6 +22,7 @@
     "thumbnail_image":
   },
   {
+    "type": "business",
     "name":,
     "director":,
     "location":,
