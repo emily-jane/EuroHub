@@ -1,6 +1,9 @@
 .column {
-  border-style: solid;
-  border-color: black;
+  border-style: dashed;
+  border-color: grey;
+  border-width: thin;
+  max-height: 90vh;
+  overflow: scroll;
 }
 
 .ui .menu.footer{
@@ -12,12 +15,13 @@
 }
 
 .footer.form-page {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   font-size: 20px;
   background-color: #2C3E50;
   padding: none;
+  height: 10vh;
 }
 
 a .footer.form-page{
@@ -47,4 +51,37 @@ a .footer.form-page{
 	background: -ms-linear-gradient(left, rgba(42,166,223,1) 0%, rgba(42,166,223,1) 51%, rgba(14,114,186,1) 51%, rgba(14,114,186,1) 100%);
 	background: linear-gradient(to right, rgba(42,166,223,1) 0%, rgba(42,166,223,1) 51%, rgba(14,114,186,1) 51%, rgba(14,114,186,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2aa6df', endColorstr='#0e72ba', GradientType=1 );
+}
+
+.search.item {
+  width: 80%;
+}
+
+.compact.menu {
+  width: 20%;
+}
+
+.big.profile {
+  max-width: 200px;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  display:inline !important;
+}
+
+
+@media (max-width: 767px) {
+  .ui.grid>.documentview.column:not(.row) {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    max-height: 80vh;
+    overflow: scroll;
+    display: none;
+  }
 }
