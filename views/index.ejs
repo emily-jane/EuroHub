@@ -1,21 +1,166 @@
 <!doctype html>
 <html lang="en" ng-app="EuroHub">
-  <head>
-    <meta charset="utf-8">
-    <title>EuroHub</title>
-    <link rel="stylesheet" type="text/css" href="assets/semantic.min.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="assets/semantic.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/euroHubController.js"></script>
-    <script src="js/hubSearchFactory.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>EuroHub</title>
+  <link rel="stylesheet" type="text/css" href="assets/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="assets/semantic.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/euroHubController.js"></script>
+  <script src="js/hubSearchFactory.js"></script>
+</head>
 
-  <body ng-controller="EuroHubController as ctrl">
+<body ng-controller="EuroHubController as ctrl">
   <button class="ui button" ng-click="searchType('people')">Type!</button>
-    <button class="ui button" ng-click="search('Facilities')">Search!</button>
-    <p>{{ test }}</p>
-  </body>
+  <button class="ui button" ng-click="search('Facilities')">Search!</button>
+
+  <div class="ui grid">
+    <div class="six wide column">
+      <div class="ui cards">
+
+        <div class="ui link green centered card people">
+          <div class="content">
+            <img class="right floated tiny ui image" src="assets/images/people/4.jpg">
+            <div class="header">Kristy Hackathon</div>
+            <div class="meta">
+              <p class="department">Marketing Dept.</p>
+              <p class="business">Metal Bulletin</p>
+              <p class="phone">020 8123 4567</p>
+            </div>
+            <div class="skills">
+              <img class="mini ui image" src="assets/user_images/html5.png">
+              <img class="mini ui image" src="assets/user_images/html5.png">
+              <img class="mini ui image" src="assets/user_images/html5.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="ui green centered card people">
+          <div class="image">
+            <img src="assets/images/people/4.jpg">
+          </div>
+          <div class="content">
+            <div class="header">Kristy Hackathon</div>
+            <div class="meta">
+              <span class="department">Marketing Dept.</span>
+              <span class="business right floated">Metal Bulletin</span>
+              <p class="phone">020 8123 4567</p>
+            </div>
+            <div class="skills">
+              <img class="mini ui image" src="assets/user_images/html5.png">
+              <img class="mini ui image" src="assets/user_images/html5.png">
+              <img class="mini ui image" src="assets/user_images/html5.png">
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="ui three buttons">
+              <div class="ui basic red button">Email</div>
+              <div class="ui basic green button">Hipchat</div>
+              <div class="ui basic blue button">Skype</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui link blue centered card business">
+          <div class="content">
+            <img class="right floated tiny ui image" src="assets/images/business/mb.png">
+            <div class="header">Metal Bulletin</div>
+            <div class="meta">
+              <p class="sector">Metal commodities</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui blue centered card business">
+          <div class="content">
+            <img class="right floated tiny ui image" src="assets/images/business/mb.png">
+            <div class="header">Metal Bulletin</div>
+            <div class="meta">
+              <p class="sector">Metal commodities</p>
+              <a class="location">29 Ludgate Hill, London, EC4M</a>
+              <p class="director">Director - Raju Daswani</p>
+              <p class="phone">020 8123 4567</p>
+            </div>
+            <p class="description">
+              Lorem ipsum dolor sit amet, duo ridens euripidis conclusionemque in, eu ius tincidunt necessitatibus, facete interesset sea at.
+            </p>
+          </div>
+          <div class="extra content">
+            <div class="ui two buttons">
+              <div class="ui basic green button">Website</div>
+              <div class="ui basic blue button">Twitter</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui link green centered card document">
+          <div class="content">
+            <div class="header">Cycle to Work Scheme</div>
+            <div class="meta">
+              <p class="department">HR</p>
+              <p class="pubdate">01/01/2013</p>
+              <p class="author">John Doe</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="ten wide column">
+      <div class="ui fluid card">
+        <div class="content">
+          <h2 class="ui header">Test Document</h2>
+          <p>Lorem ipsum dolor sit amet, duo ridens euripidis conclusionemque in, eu ius tincidunt necessitatibus, facete interesset sea at. Vim perfecto contentiones ea, no malorum disputando omittantur sed. Sit et dicta aliquam laoreet, minimum accusata
+            ea quo. Eum ei falli invidunt, vix invidunt electram at. Vix alia denique appellantur te. Movet propriae in sea, mutat reque doming pri at. Ex quaeque theophrastus est, rebum detracto hendrerit eu eum. Omnium integre evertitur eos an. Id his
+            nonumy eripuit. Ne has invenire pertinacia scripserit, vix at etiam decore convenire. Ludus honestatis inciderint eos cu, et melius reprimique quaerendum sit. Quo vide libris posidonium ut, eos ridens voluptatum ex, at pro volutpat imperdiet.
+            Eum postea posidonium repudiandae ea, esse postea persecuti et mel. Vel ei ancillae interesset, reque dicam ad mel, accusam cotidieque mei in.</p>
+          <p>Lorem ipsum dolor sit amet, duo ridens euripidis conclusionemque in, eu ius tincidunt necessitatibus, facete interesset sea at. Vim perfecto contentiones ea, no malorum disputando omittantur sed. Sit et dicta aliquam laoreet, minimum accusata
+            ea quo. Eum ei falli invidunt, vix invidunt electram at. Vix alia denique appellantur te. Movet propriae in sea, mutat reque doming pri at. Ex quaeque theophrastus est, rebum detracto hendrerit eu eum. Omnium integre evertitur eos an. Id his
+            nonumy eripuit. Ne has invenire pertinacia scripserit, vix at etiam decore convenire. Ludus honestatis inciderint eos cu, et melius reprimique quaerendum sit. Quo vide libris posidonium ut, eos ridens voluptatum ex, at pro volutpat imperdiet.
+            Eum postea posidonium repudiandae ea, esse postea persecuti et mel. Vel ei ancillae interesset, reque dicam ad mel, accusam cotidieque mei in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui menu">
+    <div class="ui compact menu">
+      <div class="ui simple dropdown item">
+        Filter
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">People</div>
+          <div class="item">Documents</div>
+          <div class="item">Businesses</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui category search item">
+      <div class="ui transparent icon input">
+        <input class="prompt" type="text" placeholder="Query the hub...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted vertical footer segment form-page">
+    <div class="ui menu footer">
+      <div class="header item">
+        <img src="assets/images/euro-money.png" alt="euro hub logo" style="width:140px;height:60px;">
+      </div>
+      <a class="item">
+        <a class="item">Email</a>
+      </a>
+      <a class="item">
+        <a class="item">Chat</a>
+      </a>
+      <a class="item">
+        <a class="item">Skype</a>
+      </a>
+    </div>
+</body>
+
 </html>
