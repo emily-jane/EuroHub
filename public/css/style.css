@@ -1,3 +1,8 @@
+.column {
+  border-style: solid;
+  border-color: black;
+}
+
 .ui .menu.footer{
   background-color: #2C3E50;
 }
@@ -7,21 +12,16 @@
 }
 
 .footer.form-page {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   font-size: 20px;
   background-color: #2C3E50;
   padding: none;
   z-index: 1;
-
 }
 
 a .footer.form-page{
   padding: 10px;
   color: #FF530F;
-}
-.column {
-  border-style: solid;
-  border-color: black;
 }
