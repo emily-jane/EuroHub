@@ -17,56 +17,44 @@
 </head>
 
 <body ng-controller="EuroHubController as ctrl">
-  <div class="ui menu">
-    <div class="ui compact menu">
-      <select ng-model='dropdown.value' class="ui dropdown">
-        <option value="">Filter</option>
-        <option value="people">People</option>
-        <option value="documents">Documents</option>
-        <option value="businesses">Businesses</option>
-      </select>
-    </div>
-    <div class="ui category search item">
-      <div class="ui transparent icon input">
-        <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub...">
-        <i class="search link icon"></i>
-      </div>
-    </div>
-  </div>
-
-  <!-- <button class="ui button" ng-click="searchType('people')">Type!</button> -->
-  <button class="ui button" ng-click="search()">Search!</button>
-
-  <div class="ui grid">
+  <div class="ui stackable two column grid">
     <div class="six wide column">
-      <div class="ui cards">
-
-
-          <ul>
-            <li ng-repeat="result in searchResults">
-              <div class="ui link green centered card people">
-                <div class="content">
-                  <img class="right floated tiny ui image" src="{{ result.image }}" >
-                  <div class="header">{{ result.first_name }} {{ result.last_name }}</div>
-                  <div class="meta">
-                    <p class="department">{{ result.department }}</p>
-                    <p class="business">{{ result.business }}</p>
-                    <p class="phone">{{ result.phone_number }}</p>
-                  </div>
-                  <div class="skills">
-                    <i class="badge fa fa-html5"></i>
-                    <i class="badge fa fa-android"></i>
-                    <i class="badge fa fa-fire-extinguisher"></i>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-
-        <div class="ui green centered card people">
+      <div class="ui menu">
+        <div class="ui compact menu">
+          <select ng-model='dropdown.value' class="ui dropdown">
+            <option value="">Filter</option>
+            <option value="people">People</option>
+            <option value="documents">Documents</option>
+            <option value="businesses">Businesses</option>
+          </select>
+        </div>
+        <div class="ui category search item">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub...">
+            <i class="fa fa-search" ng-click="search()"></i>
+          </div>
+        </div>
+      </div>
+      <div class="ui stackable cards" >
+        <div class="ui link green fluid card people" ng-repeat="result in searchResults">
+          <div class="content">
+            <img class="right floated tiny ui image" src="{{ result.image }}">
+            <div class="header">{{ result.first_name }} {{ result.last_name }}</div>
+            <div class="meta">
+              <p class="department">{{ result.department }}</p>
+              <p class="business">{{ result.business }}</p>
+              <p class="phone">{{ result.phone_number }}</p>
+            </div>
+            <div class="skills">
+              <i class="badge fa fa-html5"></i>
+              <i class="badge fa fa-android"></i>
+              <i class="badge fa fa-fire-extinguisher"></i>
+            </div>
+          </div>
+        </div>
+        <div class="ui green fluid card people">
           <div class="image">
-            <img src="assets/images/people/4.jpg">
+            <img class="big profile" src="assets/images/people/4.jpg">
           </div>
           <div class="content">
             <div class="header">Kirsty Hacky</div>
@@ -92,7 +80,7 @@
           </div>
         </div>
 
-        <div class="ui link blue centered card business">
+        <div class="ui link blue fluid card business">
           <div class="content">
             <img class="right floated tiny ui image" src="assets/images/business/mb.png">
             <div class="header">Metal Bulletin</div>
@@ -102,7 +90,7 @@
           </div>
         </div>
 
-        <div class="ui blue centered card business">
+        <div class="ui blue fluid card business">
           <div class="content">
             <img class="right floated tiny ui image" src="assets/images/business/mb.png">
             <div class="header">Metal Bulletin</div>
@@ -124,7 +112,7 @@
           </div>
         </div>
 
-        <div class="ui link green centered card document">
+        <div class="ui link green fluid card document">
           <div class="content">
             <div class="header">Cycle to Work Scheme</div>
             <div class="meta">
@@ -137,7 +125,7 @@
 
       </div>
     </div>
-    <div class="ten wide column">
+    <div class="ten wide column documentview">
       <div class="ui fluid card">
         <div class="content">
           <h2 class="ui header">Test Document</h2>
@@ -159,16 +147,11 @@
       <div class="header item">
         <img src="assets/images/euro-money.png" alt="euro hub logo" style="width:140px;height:60px;">
       </div>
-      <a class="item">
-        <a class="item">Email</a>
-      </a>
-      <a class="item">
-        <a class="item">Chat</a>
-      </a>
-      <a class="item">
-        <a class="item">Skype</a>
-      </a>
+      <a class="item">Email</a>
+      <a class="item">Chat</a>
+      <a class="item">Skype</a>
     </div>
+  </div>
 </body>
 
 </html>
