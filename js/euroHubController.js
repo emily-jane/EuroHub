@@ -7,6 +7,17 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.rightTitle = 'Company News';
 
 
+  $scope.cardClick = function() {
+
+     $('.documentview').addClass('slideUp');
+
+     $('.small-close').click(function(){
+
+         $('.documentview').removeClass('slideUp');
+     });
+   }
+
+
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
       $scope.searchList = res;

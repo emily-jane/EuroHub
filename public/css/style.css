@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5 {
-  font-family: oswald !important;  
+  font-family: oswald !important;
   font-weight: 100 !important;
  }
 
@@ -13,7 +13,7 @@ input, a, p, li {
 
 .ui.menu {
   padding: 10px;
-  background: #2475AA;  
+  background: #2475AA;
 }
 
 .largest {
@@ -21,7 +21,7 @@ input, a, p, li {
    }
 
 .default-search-view {
-  background:url(../assets/images/search_bg.png) top right no-repeat;  
+  background:url(../assets/images/search_bg.png) top right no-repeat;
 }
 
 .default-content {
@@ -29,12 +29,12 @@ input, a, p, li {
   text-align: center;
   height: 200px;
   width: 80%;
-  margin: 0 auto;  
+  margin: 0 auto;
    }
 
 
 .ui.menu .item:before {
-  
+
   display: none }
 
 .search-wrap {
@@ -89,7 +89,7 @@ input, a, p, li {
 
 
 .darker {
-  background: #ddd;  
+  background: #ddd;
 }
 
 
@@ -178,11 +178,6 @@ a .footer.form-page{
   display:inline !important;
 }
 
-.skills {
-  float: left;
-  margin-right: 5px;
-}
-
 select.ui.dropdown {
   height: 50px;
   margin-right: 10px;
@@ -192,7 +187,6 @@ select.ui.dropdown {
 .logo {
   padding: 0 10px 10px 10px !important;
   width: 150px !important;
-  cursor: pointer;
 }
 
 .fa.fa-search {
@@ -211,8 +205,53 @@ select.ui.dropdown {
 }
 
 .fa-cog:before {
-  font-size: 30px;  
+  font-size: 30px;
   pointer-events: none;
+}
+
+
+.small-close {
+  cursor: pointer; }
+
+@media (min-width: 768px) {
+
+.small-close {
+  display: none }
+
+
+ }
+
+ .card .header, .skills {
+   margin: 10px 0;
+    }
+
+
+.fire {
+  display: none;
+  text-align: center;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FF3322;
+  color: #fff;
+   }
+
+.fire .fa-fire, .fire h1 {
+  animation: blinker 1s linear infinite;
+   }
+
+
+.fire .fa {
+  font-size: 80px;
+}
+
+
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
 }
 
 @media (max-width: 767px) {
@@ -221,9 +260,13 @@ select.ui.dropdown {
     bottom: 0;
     left: 0;
     z-index: 100;
-    max-height: 80vh;
+     height: 100%;
     overflow: scroll;
     display: none;
+  }
+  .ui.grid>.documentview.slideUp.column:not(.row) {
+
+    display: block;
   }
 }
 
@@ -235,14 +278,14 @@ select.ui.dropdown {
 }
 
 @media (max-width: 830px) {
-  
+
   .logo {
     display: none !important;
   }
 }
 
 @media (max-width: 680px) {
-  
+
   .search-bar select {
     display: none !important;
   }
@@ -250,5 +293,5 @@ select.ui.dropdown {
   .search-bar, .search-w, .search.item, .search-bar input[type="text"] {
     max-width: 100% !important;
    width: 100% !important;
-  }  
+  }
 }
