@@ -9,6 +9,18 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
     });
   };
+ 
+ $scope.cardClick = function() {
+
+    $('.documentview').addClass('slideUp');
+
+    $('.small-close').click(function(){
+
+        $('.documentview').removeClass('slideUp');
+    });
+  }
+
+
 
   $scope.search = function() {
     var searchTerm = $scope.searchTerm;
@@ -26,7 +38,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
         })
       }
       $scope.searchResults = $.unique($scope.searchResults)
-      console.log($scope.searchResults)
+      console.log($scope.searchResults);
     }
   }
 
