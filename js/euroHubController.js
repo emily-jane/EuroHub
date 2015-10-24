@@ -45,6 +45,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     } else {
       $scope.noSearch = true;
       $scope.noResultsFound = false;
+      $scope.rightTitle = 'Company News';
 
     }
   }
@@ -100,9 +101,8 @@ $scope.clearSearch = function() {
     }
   }
 
-  $scope.businessClick = function(location, website) {
+  $scope.businessClick = function(location) {
     $scope.rightPane = window.location.href + location;
-    $scope.rightTitle = website;
   }
 
 }]);
