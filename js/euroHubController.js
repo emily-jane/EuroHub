@@ -6,6 +6,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
       $scope.searchList = res;
+
     });
   };
 
@@ -28,6 +29,16 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
       console.log($scope.searchResults)
     }
   }
+
+
+
+
+$scope.clearSearch = function() {
+  $scope.searchResults = [];
+  $scope.searchTerm = "";
+  $scope.rightPane = "assets/images/euro-money.png";
+  };
+
 
   $scope.arrayCheck = function(option) {
     if (Array.isArray(option)) {
@@ -53,6 +64,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.$watch("dropdown.value", function(select) {
     $scope.searchCategory = select;
     searchType();
+
   })
 
 
