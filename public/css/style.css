@@ -73,6 +73,11 @@ a .footer.form-page{
   display:inline !important;
 }
 
+.skills {
+  float: left;
+  margin-right: 5px;
+}
+
 
 @media (max-width: 767px) {
   .ui.grid>.documentview.column:not(.row) {
