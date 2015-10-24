@@ -2,6 +2,7 @@
 <html lang="en" ng-app="EuroHub">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EuroHub</title>
@@ -35,7 +36,7 @@
           <option value="businesses">Businesses</option>
         </select>
       </div>
-      <div class="item">
+      <div class="item search-w">
       <div class="ui category search item">
         <div class="ui transparent icon input">
           <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub..." ng-model-options="{ updateOn:'default
@@ -83,10 +84,8 @@
               <p class="business">{{ result.business }}</p>
               <p class="phone">{{ result.phone_number }}</p>
             </div>
-            <div class="skills">
-              <i class="badge fa fa-html5"></i>
-              <i class="badge fa fa-android"></i>
-              <i class="badge fa fa-fire-extinguisher"></i>
+            <div class="skills" ng-repeat="skill in result.skills">
+              <i class="badge fa {{ badges[skill] }}" title="{{skill}}"></i>
             </div>
           </div>
           <div class="extra content">
