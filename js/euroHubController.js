@@ -1,6 +1,7 @@
 euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', function($scope, hubSearchFactory) {
 
   $scope.test = "Hello world!"
+  $scope.rightPane = "assets/images/euro-money.png";
 
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
@@ -53,7 +54,6 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     searchType();
   })
 
-  $scope.rightPane = "assets/images/euro-money.png";
 
   $scope.openImage = function(location) {
     $scope.rightPane = location;
