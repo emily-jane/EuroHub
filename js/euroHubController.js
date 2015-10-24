@@ -2,6 +2,9 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
   $scope.test = "Hello world!"
   $scope.rightPane = "assets/images/euro-money.png";
+  $scope.noSearch = true;
+  $scope.badges = hubSearchFactory.badges;
+
 
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
@@ -11,6 +14,16 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   };
  
  $scope.cardClick = function() {
+
+  function checksearch(results) {
+    if (results.length === 0){
+      $scope.noResultsFound = true;
+    } else {
+      $scope.noResultsFound = false;
+    }
+  };
+
+  $scope.noResultsFound = false;
 
     $('.documentview').addClass('slideUp');
 
@@ -23,6 +36,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
 
   $scope.search = function() {
+    $scope.noSearch = false;
     var searchTerm = $scope.searchTerm;
     $scope.rightPane = "assets/images/euro-money.png";
     $scope.searchResults = [];
@@ -38,14 +52,18 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
         })
       }
       $scope.searchResults = $.unique($scope.searchResults)
-      console.log($scope.searchResults);
+      checksearch($scope.searchResults);
+    } else {
+      $scope.noSearch = true;
+      $scope.noResultsFound = false;
+
     }
   }
 
 
-
-
 $scope.clearSearch = function() {
+  $scope.noSearch = true;
+  $scope.noResultsFound = false;
   $scope.searchResults = [];
   $scope.searchTerm = "";
   $scope.rightPane = "assets/images/euro-money.png";

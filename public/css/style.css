@@ -211,9 +211,15 @@ select.ui.dropdown {
 
 
 .small-close {
-  cursor: pointer;
-   }
+  cursor: pointer; }
 
+@media (min-width: 768px) {
+
+.small-close {
+  display: none }
+
+
+ }
 
 
 @media (max-width: 767px) {
