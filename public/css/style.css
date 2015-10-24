@@ -1,11 +1,91 @@
 * {
   box-sizing: border-box; }
 
+h1, h2, h3, h4, h5 {
+  font-family: oswald !important;  
+  font-weight: 100 !important;
+ }
+
 
 input, a, p, li {
   font-size: 16px !important;
 }
 
+.ui.menu {
+  padding: 10px;
+  background: #2475AA;  
+}
+
+.largest {
+  height: 100%;
+   }
+
+.default-search-view {
+  background:url(../assets/images/search_bg.png) top right no-repeat;  
+}
+
+.default-content {
+  padding-top: 50px;
+  text-align: center;
+  height: 200px;
+  width: 80%;
+  margin: 0 auto;  
+   }
+
+
+.ui.menu .item:before {
+  
+  display: none }
+
+.search-wrap {
+  text-align: center;
+  width: 100%;
+}
+
+.extra-links {
+  width: 340px;
+  text-align: right;
+  float: right; }
+
+.extra-links ul {
+  padding: 0;
+  margin: 0; }
+
+.extra-links li:last-child {
+  margin-right: 0px; }
+
+.extra-links li {
+  list-style: none;
+  margin-right: 10px;
+  display: inline; }
+
+.extra-links li img {
+  width: 50px;
+  height: 50px; }
+
+.search-bar {
+  display: inline-block;
+}
+
+.search-bar .item {
+  padding: 0 !important;
+  float: left;
+  height: 50px;
+  margin: 0 !important;
+   }
+
+.search-bar select {
+  float: left;
+  height: 50px;
+   }
+
+
+
+.ui.transparent.input input, .ui.transparent.icon.input>input {
+  width: 500px;
+  padding: 14px !important;
+  border-radius: 5px !important;
+  background: #fff !important; }
 
 
 .darker {
@@ -100,18 +180,20 @@ a .footer.form-page{
 
 select.ui.dropdown {
   height: 50px;
-  border: 0;  
-  border-right: 1px solid #ddd;
-  position: relative;
-  background: rgba(255,255,255,1);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  margin-right: 10px;
+  border-radius: 6px;
 }
 
 .logo {
+  padding: 0 10px 10px 10px !important;
   width: 150px !important;  
 }
+
+.fa.fa-search {
+  position: relative;
+  left: -30px;
+  font-size: 20px;
+  top: 15px; }
 
 
 .fa-cog {
@@ -127,9 +209,6 @@ select.ui.dropdown {
   pointer-events: none;
 }
 
-.search.item {
- 
-}
 
 
 
