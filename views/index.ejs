@@ -77,10 +77,8 @@
               <p class="business">{{ result.business }}</p>
               <p class="phone">{{ result.phone_number }}</p>
             </div>
-            <div class="skills">
-              <i class="badge fa fa-html5"></i>
-              <i class="badge fa fa-android"></i>
-              <i class="badge fa fa-fire-extinguisher"></i>
+            <div class="skills" ng-repeat="skill in result.skills">
+              <i class="badge fa {{ badges[skill] }}" title="{{skill}}"></i>
             </div>
           </div>
           <div class="extra content">

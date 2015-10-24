@@ -178,6 +178,11 @@ a .footer.form-page{
   display:inline !important;
 }
 
+.skills {
+  float: left;
+  margin-right: 5px;
+}
+
 select.ui.dropdown {
   height: 50px;
   margin-right: 10px;
@@ -208,10 +213,6 @@ select.ui.dropdown {
   font-size: 30px;  
   pointer-events: none;
 }
-
-
-
-
 
 @media (max-width: 767px) {
   .ui.grid>.documentview.column:not(.row) {
