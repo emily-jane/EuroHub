@@ -187,6 +187,7 @@ select.ui.dropdown {
 .logo {
   padding: 0 10px 10px 10px !important;
   width: 150px !important;
+  cursor: pointer;
 }
 
 .fa.fa-search {
@@ -246,6 +247,11 @@ select.ui.dropdown {
 
 .fire .fa {
   font-size: 80px;
+}
+
+.skills {
+  float: left;
+  margin-right: 5px;
 }
 
 
