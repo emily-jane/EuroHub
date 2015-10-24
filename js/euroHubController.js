@@ -16,7 +16,7 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
         if ($scope.arrayCheck(value) && $.inArray(searchTerm, value) !== -1) {
             $scope.searchResults.push($scope.searchList[i]);
         }
-        else if ($scope.stringCheck(value) && (value === searchTerm)) {
+        else if ($scope.stringCheck(value) && (value.substring(0,searchTerm.length) === searchTerm)) {
           $scope.searchResults.push($scope.searchList[i]);
         }
       })
@@ -39,8 +39,6 @@ euroHubModule.controller('EuroHubController', ['$scope','hubSearchFactory', func
     $scope.searchCategory = select;
     searchType();
   })
-
-// <img src="{{ rightPane }}" alt="euro hub logo" style="width:100%;height:100%">
 
   $scope.rightPane = "assets/images/euro-money.png";
 
