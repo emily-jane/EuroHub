@@ -62,8 +62,11 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.documentClick = function(location, download) {
     if (download === false) {
       $scope.rightPane = window.location.href + location;
-      console.log('clicked');
     }
+  }
+
+  $scope.businessClick = function(location) {
+    $scope.rightPane = window.location.href + location;
   }
 
 }]);

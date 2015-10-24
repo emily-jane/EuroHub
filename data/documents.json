@@ -2,6 +2,7 @@
   {
     "type": "document",
     "title": "Holiday request form",
+    "name": "Holiday request form",
     "search_terms":["holiday", "absence", "leave", "annual"],
     "file_path":"data/documents/HR/HolidayRequestForm.docx",
     "download":true,
@@ -13,6 +14,7 @@
   {
     "type": "document",
     "title": "Health and Safety policy",
+    "name": "Health and Safety policy",
     "search_terms":["company", "health", "safety"],
     "file_path":"data/documents/HR/HealthSafetyInfo.html",
     "download":false,
@@ -24,6 +26,7 @@
   {
     "type": "document",
     "title": "Expense claim form",
+    "name": "Expense Claim",
     "search_terms":["expenses", "travel", "food"],
     "file_path":"data/Finance/ExpenseClaimForm.xls",
     "download":true,
@@ -35,6 +38,7 @@
   {
     "type": "document",
     "title":"Cycle to work scheme information",
+    "Name":"Cycle to work scheme",
     "search_terms":["cycle", "bike", "scheme", "benefits"],
     "file_path":"data/HR/Ride2WorkGuidance.pdf",
     "download":true,
