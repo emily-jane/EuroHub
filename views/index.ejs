@@ -22,7 +22,7 @@
         <img src="assets/images/euro-money-white.png" alt="euro hub logo" style="width:115px;height:50px;">
       </div>
       <div class="item">
-        <select ng-model='dropdown.value' class="ui dropdown" ng-init="dropdown.value = 'all'">
+        <select ng-model='dropdown.value' class="ui dropdown" ng-init="dropdown.value = 'all'" ng-change="clearSearch()" >
           <option value="all" selected="selected">All</option>
           <option value="people">People</option>
           <option value="documents">Documents</option>
