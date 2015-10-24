@@ -4,6 +4,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.rightPane = "assets/images/euro-money.png";
   $scope.noSearch = true;
   $scope.badges = hubSearchFactory.badges;
+  $scope.rightTitle = 'Company News';
 
 
   function searchType() {
@@ -44,6 +45,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     } else {
       $scope.noSearch = true;
       $scope.noResultsFound = false;
+      $scope.rightTitle = 'Company News';
 
     }
   }
@@ -55,6 +57,7 @@ $scope.clearSearch = function() {
   $scope.searchResults = [];
   $scope.searchTerm = "";
   $scope.rightPane = "assets/images/euro-money.png";
+  $scope.rightTitle = "Company News";
   };
 
 
@@ -86,13 +89,15 @@ $scope.clearSearch = function() {
   })
 
 
-  $scope.openImage = function(location) {
+  $scope.openImage = function(location, first_name, last_name, desk) {
     $scope.rightPane = location;
+    $scope.rightTitle = first_name + ' ' + last_name + ', Desk: ' + desk;
   }
 
-  $scope.documentClick = function(location, download) {
+  $scope.documentClick = function(location, download, title, department) {
     if (download === false) {
       $scope.rightPane = window.location.href + location;
+      $scope.rightTitle = title + ', Department: ' + department;
     }
   }
 
