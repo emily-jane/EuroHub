@@ -3,6 +3,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.test = "Hello world!"
   $scope.rightPane = "assets/images/euro-money.png";
   $scope.badges = hubSearchFactory.badges;
+  $scope.rightTitle = 'Company News';
 
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
@@ -37,6 +38,7 @@ $scope.clearSearch = function() {
   $scope.searchResults = [];
   $scope.searchTerm = "";
   $scope.rightPane = "assets/images/euro-money.png";
+  $scope.rightTitle = "Company News";
   };
 
 
@@ -68,18 +70,21 @@ $scope.clearSearch = function() {
   })
 
 
-  $scope.openImage = function(location) {
+  $scope.openImage = function(location, first_name, last_name, desk) {
     $scope.rightPane = location;
+    $scope.rightTitle = first_name + ' ' + last_name + ', Desk: ' + desk;
   }
 
-  $scope.documentClick = function(location, download) {
+  $scope.documentClick = function(location, download, title, department) {
     if (download === false) {
       $scope.rightPane = window.location.href + location;
+      $scope.rightTitle = title + ', Department: ' + department;
     }
   }
 
-  $scope.businessClick = function(location) {
+  $scope.businessClick = function(location, website) {
     $scope.rightPane = window.location.href + location;
+    $scope.rightTitle = website;
   }
 
 }]);
