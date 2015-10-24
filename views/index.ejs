@@ -55,7 +55,7 @@
               <p class="phone">{{ result.phone_number }}</p>
             </div>
             <div class="skills" ng-repeat="skill in result.skills">
-              <i class="badge fa {{ badges[skill] }}" data-content="hello" data-variation="basic"></i>
+              <i class="badge fa {{ badges[skill] }}" title="{{skill}}"></i>
             </div>
           </div>
         </div>
