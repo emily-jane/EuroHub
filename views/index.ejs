@@ -17,24 +17,32 @@
 </head>
 
 <body ng-controller="EuroHubController as ctrl">
-  <div class="ui stackable two column grid">
-    <div class="six wide column">
-      <div class="ui menu">
-        <select ng-model='dropdown.value' class="ui inline dropdown">
+  <div class="ui menu">
+      <div class="item">
+        <img src="assets/images/euro-money-white.png" alt="euro hub logo" style="width:115px;height:50px;">
+      </div>
+      <div class="item">
+        <select ng-model='dropdown.value' class="ui dropdown" ng-selected="dropdown.value = 'all'">
           <option value="all">All</option>
           <option value="people">People</option>
           <option value="documents">Documents</option>
           <option value="businesses">Businesses</option>
         </select>
-        <div class="ui category search item">
-          <div class="ui transparent icon input">
-            <input class="prompt" type="text" ng-model="searchTerm"
-            placeholder="Query the hub..." ng-model-options="{ updateOn:'default
-            blur', debounce: {'default': 500, 'blur': 0} }" ng-change="search()">
-            <i class="fa fa-search" ng-click="search()"></i>
-          </div>
+      </div>
+      <div class="item">
+      <div class="ui category search item">
+        <div class="ui transparent icon input">
+          <input class="prompt" type="text" ng-model="searchTerm"
+          placeholder="Query the hub..." ng-model-options="{ updateOn:'default
+          blur', debounce: {'default': 500, 'blur': 0} }" ng-change="search()">
+          <i class="fa fa-search" ng-click="search()"></i>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="ui stackable two column grid">
+    <div class="six wide column">
       <div class="ui stackable cards" ng-repeat="result in searchResults">
         <div class="ui link green fluid card people" ng-click="openImage(result.floorplan)" ng-if="result.type === 'person'">
           <div class="content">
@@ -88,17 +96,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="ui inverted vertical footer segment form-page">
-    <div class="ui menu footer">
-      <div class="header item">
-        <img src="assets/images/euro-money.png" alt="euro hub logo" style="width:140px;height:60px;">
-      </div>
-      <a class="item">Email</a>
-      <a class="item">Chat</a>
-      <a class="item">Skype</a>
     </div>
   </div>
 </body>
