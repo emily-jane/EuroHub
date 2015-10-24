@@ -13,7 +13,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     $scope.searchResults = [];
     for (var i = 0; i < $scope.searchList.length; i++) {
       $.each($scope.searchList[i], function(key, value) {
-        if ($scope.arrayCheck(value) && $.inArray(searchTerm, value) !== -1) {
+        if ($scope.arrayCheck(value) && $scope.inArrayPartial(searchTerm, value)) {
           $scope.searchResults.push($scope.searchList[i]);
         } else if ($scope.stringCheck(value) && (value.substring(0, searchTerm.length) === searchTerm)) {
           $scope.searchResults.push($scope.searchList[i]);
@@ -34,6 +34,15 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     if (typeof option === 'string') {
       return true;
     }
+  }
+
+  $scope.inArrayPartial = function(searchTerm, value) {
+    for (var i = 0; i < value.length; i++) {
+      if (value[i].substring(0, searchTerm.length) === searchTerm) {
+        return true;
+      }
+    }
+
   }
 
   $scope.$watch("dropdown.value", function(select) {
