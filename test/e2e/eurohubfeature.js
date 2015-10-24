@@ -13,6 +13,15 @@ describe('Euro Hub', function() {
     expect(element(by.className('header')).getText()).
         toEqual('Alexander Jones');
 
-  })
+  });
 
+  it('searches for documents', function() {
+    element(by.cssContainingText('option', 'Documents')).click();
+    element(by.model('searchTerm')).sendKeys('health');
+    element(by.className('fa-search')).click();
+
+    expect(element(by.className('header')).getText()).
+        toEqual('Health and Safety policy');
+
+  });
 })
