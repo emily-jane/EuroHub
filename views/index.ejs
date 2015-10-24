@@ -66,6 +66,13 @@
           <p>(To get started, enter a search term)</p>
         </div>
       </div>
+
+      <div class="default-search-view" ng-show="noResultsFound">
+        <div class="default-content" >
+          <h2>No Results Found</h2>
+        </div>
+      </div>
+
       <div class="ui stackable cards" ng-repeat="result in searchResults">
         <div class="ui link green fluid card people small" ng-click="openImage(result.floorplan)" ng-if="result.type === 'person'">
           <div class="content">

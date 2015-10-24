@@ -11,6 +11,16 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     });
   };
 
+  function checksearch(results) {
+    if (results.length === 0){
+      $scope.noResultsFound = true;
+    } else {
+      $scope.noResultsFound = false;
+    }
+  };
+
+  $scope.noResultsFound = false;
+
   $scope.search = function() {
     $scope.noSearch = false;
     var searchTerm = $scope.searchTerm;
@@ -28,9 +38,11 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
         })
       }
       $scope.searchResults = $.unique($scope.searchResults)
+      checksearch($scope.searchResults);
     } else {
       $scope.noSearch = true;
-      
+      $scope.noResultsFound = false;
+
     }
   }
 
@@ -39,6 +51,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
 $scope.clearSearch = function() {
   $scope.noSearch = true;
+  $scope.noResultsFound = false;
   $scope.searchResults = [];
   $scope.searchTerm = "";
   $scope.rightPane = "assets/images/euro-money.png";
