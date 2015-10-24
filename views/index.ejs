@@ -27,7 +27,7 @@
       <div class="search-wrap"> 
       <div class="search-bar">
       <div class="item">
-        <select ng-model='dropdown.value' class="ui dropdown" ng-init="dropdown.value = 'all'">
+        <select ng-model='dropdown.value' class="ui dropdown" ng-init="dropdown.value = 'all'" ng-change="clearSearch()" >
           <option value="all" selected="selected">All</option>
           <option value="people">People</option>
           <option value="documents">Documents</option>
@@ -37,8 +37,7 @@
       <div class="item">
       <div class="ui category search item">
         <div class="ui transparent icon input">
-          <input class="prompt" type="text" ng-model="searchTerm"
-          placeholder="Query the hub..." ng-model-options="{ updateOn:'default
+          <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub..." ng-model-options="{ updateOn:'default
           blur', debounce: {'default': 500, 'blur': 0} }" ng-change="search()">
           <i class="fa fa-search" ng-click="search()"></i>
         </div>
@@ -67,9 +66,9 @@
         </div>
       </div>
       <div class="ui stackable cards" ng-repeat="result in searchResults">
-        <div class="ui link green fluid card people" ng-click="openImage(result.floorplan)" ng-if="result.type === 'person'">
+        <div class="ui link green fluid card people small" ng-click="openImage(result.floorplan)" ng-if="result.type === 'person'">
           <div class="content">
-            <img class="right floated tiny ui image" src="{{ result.image }}">
+            <img class="right floated small ui image circular bordered" src="{{ result.image }}">
             <div class="header">{{ result.first_name }} {{ result.last_name }}</div>
             <div class="meta">
               <p class="department">{{ result.department }}</p>
@@ -82,20 +81,29 @@
               <i class="badge fa fa-fire-extinguisher"></i>
             </div>
           </div>
-        </div>
-
-        <div class="ui link blue fluid card business" ng-if="result.type === 'business'">
-          <div class="content">
-            <img class="right floated tiny ui image" src="{{ result.logo }}">
-            <div class="header">{{ result.name }}</div>
-            <div class="meta">
-              <p class="sector">{{ result.sector }}</p>
+          <div class="extra content">
+            <div class="ui three buttons">
+              <div class="ui basic red button"><i class="fa fa-envelope fa-lg"></i></div>
+              <div class="ui basic green button"><i class="fa fa-weixin fa-lg"></i></div>
+              <div class="ui basic blue button"><i class="fa fa-skype fa-lg"></i></div>
             </div>
           </div>
         </div>
 
-        <div ng-click="documentClick(result.file_path, result.download)" class="ui link green fluid card document" ng-if="result.type === 'document'" >
-          <div class="content" >
+        <div ng-click="businessClick(result.file_path)" class="ui link blue fluid card business" ng-if="result.type === 'business'">
+          <div class="content">
+            <img class="right floated small ui image" src="{{ result.logo }}">
+            <div class="header">{{ result.name }}</div>
+            <div class="meta">
+              <p class="sector">{{ result.sector }}</p>
+            </div>
+            <p>{{ result.location }}</p>
+            <a>{{ result.website }}</a>
+          </div>
+        </div>
+
+        <div ng-click="documentClick(result.file_path, result.download)" class="ui link green fluid card document" ng-if="result.type === 'document'">
+          <div class="content">
             <div class="header">{{ result.title }}</div>
             <div class="meta">
               <p class="department">{{ result.department }}</p>
