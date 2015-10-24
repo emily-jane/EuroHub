@@ -61,7 +61,7 @@
           </div>
         </div>
 
-        <div class="ui link blue fluid card business" ng-if="result.type === 'business'">
+        <div ng-click="businessClick(result.file_path)" class="ui link blue fluid card business" ng-if="result.type === 'business'">
           <div class="content">
             <img class="right floated tiny ui image" src="{{ result.logo }}">
             <div class="header">{{ result.name }}</div>
@@ -87,7 +87,7 @@
     <div class="ten wide column documentview">
       <div class="ui fluid card">
         <div class="content">
-          <h2 class="ui header">Test Document</h2>
+          <h2 class="ui header"></h2>
           <div ng-if="rightPane.indexOf('images') !== -1">
             <img src="{{ rightPane }}" alt="euro hub logo" style="width:100%;height:100%">
           </div>
