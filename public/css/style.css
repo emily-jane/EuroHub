@@ -43,7 +43,7 @@ input, a, p, li {
 }
 
 .extra-links {
-  width: 340px;
+  width: 385px;
   text-align: right;
   float: right; }
 
@@ -223,4 +223,30 @@ select.ui.dropdown {
     overflow: scroll;
     display: none;
   }
+}
+
+@media (max-width: 1150px) {
+
+  .extra-links {
+    display: none;
+  }
+}
+
+@media (max-width: 830px) {
+  
+  .logo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  
+  .search-bar select {
+    display: none !important;
+  }
+
+  .search-bar, .search-w, .search.item, .search-bar input[type="text"] {
+    max-width: 100% !important;
+   width: 100% !important;
+  }  
 }
