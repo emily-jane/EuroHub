@@ -9,6 +9,7 @@
     "twitter_link":"@metalbulletin",
     "website":"http://www.metalbulletin.com",
     "cost_centre":"MMM",
+    "file_path":"data/documents/business_pages/metal_bulletin.html",
     "logo":"assets/images/business/mb.png"
   },
   {
@@ -20,8 +21,9 @@
     "no_employees":"100",
     "twitter_link":"@euromoney",
     "website":"http://www.capacityconferences.com",
+    "file_path":"data/documents/business_pages/telcap.html",
     "cost_centre":"MTC",
-    "logo":"assets/images/business/tc.jpeg"
+    "logo":"assets/images/business/tc.jpg"
   },
   {
     "type": "business",
@@ -32,8 +34,9 @@
     "no_employees":"200",
     "twitter_link":"@euromoney",
     "website":"http://www.globalcapital.com",
+    "file_path":"data/documents/business_pages/global_capital.html",
     "cost_centre":"MEM",
-    "logo":"assets/images/business/gc.jpeg"
+    "logo":"assets/images/business/gc.jpg"
   },
   {
     "type": "business",
@@ -44,6 +47,7 @@
     "no_employees":"50",
     "twitter_link":"@euromoney",
     "website":"http://www.euromoneyseminars.com",
+    "file_path":"data/documents/business_pages/special_finance_events.html",
     "cost_centre":"SFE",
     "logo":"assets/images/business/sfe.jpg"
   }

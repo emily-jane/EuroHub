@@ -1,23 +1,26 @@
 euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', function($scope, hubSearchFactory) {
 
   $scope.test = "Hello world!"
+  $scope.rightPane = "assets/images/euro-money.png";
 
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
       $scope.searchList = res;
+
     });
   };
 
   $scope.search = function() {
     var searchTerm = $scope.searchTerm;
+    $scope.rightPane = "assets/images/euro-money.png";
     $scope.searchResults = [];
 
     if (searchTerm.length > 0) {
       for (var i = 0; i < $scope.searchList.length; i++) {
         $.each($scope.searchList[i], function(key, value) {
-          if ($scope.arrayCheck(value) && $scope.inArrayPartial(searchTerm, value)) {
+          if ($scope.arrayCheck(value) && $scope.inArrayPartial(searchTerm.toUpperCase(), value)) {
             $scope.searchResults.push($scope.searchList[i]);
-          } else if ($scope.stringCheck(value) && (value.substring(0, searchTerm.length) === searchTerm)) {
+          } else if ($scope.stringCheck(value) && (value.toUpperCase().substring(0, searchTerm.length) === searchTerm.toUpperCase())) {
             $scope.searchResults.push($scope.searchList[i]);
           }
         })
@@ -26,6 +29,16 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
       console.log($scope.searchResults)
     }
   }
+
+
+
+
+$scope.clearSearch = function() {
+  $scope.searchResults = [];
+  $scope.searchTerm = "";
+  $scope.rightPane = "assets/images/euro-money.png";
+  };
+
 
   $scope.arrayCheck = function(option) {
     if (Array.isArray(option)) {
@@ -41,7 +54,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
   $scope.inArrayPartial = function(searchTerm, value) {
     for (var i = 0; i < value.length; i++) {
-      if (value[i].substring(0, searchTerm.length) === searchTerm) {
+      if (value[i].toUpperCase().substring(0, searchTerm.length) === searchTerm) {
         return true;
       }
     }
@@ -51,9 +64,9 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.$watch("dropdown.value", function(select) {
     $scope.searchCategory = select;
     searchType();
+
   })
 
-  $scope.rightPane = "assets/images/euro-money.png";
 
   $scope.openImage = function(location) {
     $scope.rightPane = location;
@@ -62,8 +75,11 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.documentClick = function(location, download) {
     if (download === false) {
       $scope.rightPane = window.location.href + location;
-      console.log('clicked');
     }
+  }
+
+  $scope.businessClick = function(location) {
+    $scope.rightPane = window.location.href + location;
   }
 
 }]);
