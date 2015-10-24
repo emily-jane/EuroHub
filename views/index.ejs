@@ -28,7 +28,9 @@
         </select>
         <div class="ui category search item">
           <div class="ui transparent icon input">
-            <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub...">
+            <input class="prompt" type="text" ng-model="searchTerm"
+            placeholder="Query the hub..." ng-model-options="{ updateOn:'default
+            blur', debounce: {'default': 500, 'blur': 0} }" ng-change="search()">
             <i class="fa fa-search" ng-click="search()"></i>
           </div>
         </div>
