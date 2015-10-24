@@ -18,18 +18,18 @@
 
 <body ng-controller="EuroHubController as ctrl">
   <div class="ui menu">
-    <div class="item">
-      <img src="assets/images/euro-money-white.png" alt="euro hub logo" style="width:115px;height:50px;">
-    </div>
-    <div class="item">
-      <select ng-model='dropdown.value' class="ui dropdown" ng-init="dropdown.value = 'all'">
-        <option value="all" selected="selected">All</option>
-        <option value="people">People</option>
-        <option value="documents">Documents</option>
-        <option value="businesses">Businesses</option>
-      </select>
-    </div>
-    <div class="item">
+      <div class="item">
+        <img src="assets/images/euro-money-white.png" alt="euro hub logo" style="width:115px;height:50px;">
+      </div>
+      <div class="item">
+        <select ng-model='dropdown.value' class="ui dropdown" ng-init="dropdown.value = 'all'" ng-change="clearSearch()" >
+          <option value="all" selected="selected">All</option>
+          <option value="people">People</option>
+          <option value="documents">Documents</option>
+          <option value="businesses">Businesses</option>
+        </select>
+      </div>
+      <div class="item">
       <div class="ui category search item">
         <div class="ui transparent icon input">
           <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub..." ng-model-options="{ updateOn:'default
@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <div class="ui link blue fluid card business" ng-if="result.type === 'business'">
+        <div ng-click="businessClick(result.file_path)" class="ui link blue fluid card business" ng-if="result.type === 'business'">
           <div class="content">
             <img class="right floated small ui image" src="{{ result.logo }}">
             <div class="header">{{ result.name }}</div>
@@ -95,7 +95,7 @@
     <div class="ten wide column documentview">
       <div class="ui fluid card">
         <div class="content">
-          <h2 class="ui header">Test Document</h2>
+          <h2 class="ui header"></h2>
           <div ng-if="rightPane.indexOf('images') !== -1">
             <img src="{{ rightPane }}" alt="euro hub logo" style="width:100%;height:100%">
           </div>
