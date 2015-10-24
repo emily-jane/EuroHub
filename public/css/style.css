@@ -1,9 +1,22 @@
+* {
+  box-sizing: border-box; }
+
+
+input, a, p, li {
+  font-size: 16px !important;
+}
+
+
+
+.darker {
+  background: #ddd;  
+}
+
+
 .column {
-  border-style: dashed;
-  border-color: grey;
-  border-width: thin;
+
   max-height: 90vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .ui .menu.footer{
@@ -13,6 +26,18 @@
     background-color: #2C3E50;
     padding: 0px;
 }
+
+.documentview {
+  padding: 50px !important;
+  padding-bottom: 20px !important;
+}
+
+.documentview_persist {
+  padding: 50px !important;
+  padding-top: 0px !important;
+}
+
+
 
 .footer.form-page {
   position: relative;
@@ -54,11 +79,11 @@ a .footer.form-page{
 }
 
 .search.item {
-  width: 80%;
+  width: 100%;
 }
 
-.compact.menu {
-  width: 20%;
+.inline.dropdown {
+  float: left;
 }
 
 .big.profile {
@@ -72,6 +97,41 @@ a .footer.form-page{
 .image img {
   display:inline !important;
 }
+
+select.ui.dropdown {
+  height: 50px;
+  border: 0;  
+  border-right: 1px solid #ddd;
+  position: relative;
+  background: rgba(255,255,255,1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.logo {
+  width: 150px !important;  
+}
+
+
+.fa-cog {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 100;
+  display: none !important;
+}
+
+.fa-cog:before {
+  font-size: 30px;  
+  pointer-events: none;
+}
+
+.search.item {
+ 
+}
+
+
 
 
 @media (max-width: 767px) {
