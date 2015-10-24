@@ -6,6 +6,21 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
   $scope.badges = hubSearchFactory.badges;
   $scope.rightTitle = 'Company News';
 
+  Pusher.log = function(message) {
+    if (window.console && window.console.log) {
+      window.console.log(message);
+    }
+  };
+
+  var pusher = new Pusher('576f64a3302dbb55d959', {
+    encrypted: true
+  });
+  var channel = pusher.subscribe('my_channel');
+  channel.bind('my_event', function(data) {
+    // alert(data.message);
+    $(".fire").toggle();
+  });
+
 
   $scope.cardClick = function() {
 
