@@ -29,12 +29,13 @@
         </select>
         <div class="ui category search item">
           <div class="ui transparent icon input">
-            <input class="prompt" type="text" ng-model="searchTerm" placeholder="Query the hub...">
+            <input class="prompt" type="text" ng-model="searchTerm"
+            placeholder="Query the hub..." ng-model-options="{ updateOn:'default
+            blur', debounce: {'default': 500, 'blur': 0} }" ng-change="search()">
             <i class="fa fa-search" ng-click="search()"></i>
           </div>
         </div>
       </div>
-
       <div class="ui stackable cards" ng-repeat="result in searchResults">
         <div class="ui link green fluid card people" ng-click="openImage(result.floorplan)" ng-if="result.type === 'person'">
           <div class="content">
@@ -63,8 +64,8 @@
           </div>
         </div>
 
-        <div class="ui link green fluid card document" ng-if="result.type === 'document'">
-          <div class="content">
+        <div ng-click="documentClick(result.file_path, result.download)" class="ui link green fluid card document" ng-if="result.type === 'document'" >
+          <div class="content" >
             <div class="header">{{ result.title }}</div>
             <div class="meta">
               <p class="department">{{ result.department }}</p>
@@ -75,61 +76,17 @@
         </div>
       </div>
 
-      <div class="ui stackable cards">
-        <div class="ui green fluid card people">
-          <div class="image">
-            <img class="big profile" src="assets/images/people/4.jpg">
-          </div>
-          <div class="content">
-            <div class="header">Kirsty Hacky</div>
-            <div class="meta">
-              <span class="department">Marketing Dept.</span>
-              <span class="business right floated">Metal Bulletin</span>
-              <p class="phone">020 8123 4567</p>
-            </div>
-            <div class="skills">
-              <i class="badge fa fa-html5"></i>
-              <i class="badge fa fa-android"></i>
-              <i class="badge fa fa-fire-extinguisher"></i>
-            </div>
-          </div>
-          <div class="extra content">
-            <div class="ui three buttons">
-              <div class="ui basic red button">Email</div>
-              <div class="ui basic green button">Hipchat</div>
-              <div class="ui basic blue button">Skype</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ui blue fluid card business">
-          <div class="content">
-            <img class="right floated tiny ui image" src="assets/images/business/mb.png">
-            <div class="header">Metal Bulletin</div>
-            <div class="meta">
-              <p class="sector">Metal commodities</p>
-              <a class="location">29 Ludgate Hill, London, EC4M</a>
-              <p class="director">Director - Raju Daswani</p>
-              <p class="phone">020 8123 4567</p>
-            </div>
-            <p class="description">
-              Lorem ipsum dolor sit amet, duo ridens euripidis conclusionemque in, eu ius tincidunt necessitatibus, facete interesset sea at.
-            </p>
-          </div>
-          <div class="extra content">
-            <div class="ui two buttons">
-              <div class="ui basic green button">Website</div>
-              <div class="ui basic blue button">Twitter</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="ten wide column documentview">
       <div class="ui fluid card">
         <div class="content">
           <h2 class="ui header">Test Document</h2>
-          <img src="{{ floorplanImage }}" alt="euro hub logo" style="width:100%;height:100%">
+          <div ng-if="rightPane.indexOf('images') !== -1">
+            <img src="{{ rightPane }}" alt="euro hub logo" style="width:100%;height:100%">
+          </div>
+          <div ng-if="rightPane.indexOf('html') !== -1">
+            <div ng-include="rightPane"></div>
+          </div>
         </div>
       </div>
     </div>
