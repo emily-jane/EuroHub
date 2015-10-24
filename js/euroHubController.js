@@ -2,7 +2,36 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
   $scope.test = "Hello world!"
   $scope.rightPane = "assets/images/euro-money.png";
+  $scope.noSearch = true;
   $scope.badges = hubSearchFactory.badges;
+  $scope.rightTitle = 'Company News';
+
+  Pusher.log = function(message) {
+    if (window.console && window.console.log) {
+      window.console.log(message);
+    }
+  };
+
+  var pusher = new Pusher('576f64a3302dbb55d959', {
+    encrypted: true
+  });
+  var channel = pusher.subscribe('my_channel');
+  channel.bind('my_event', function(data) {
+    // alert(data.message);
+    $(".fire").toggle();
+  });
+
+
+  $scope.cardClick = function() {
+
+     $('.documentview').addClass('slideUp');
+
+     $('.small-close').click(function(){
+
+         $('.documentview').removeClass('slideUp');
+     });
+   }
+
 
   function searchType() {
     hubSearchFactory.searchType($scope.searchCategory).then(function(res) {
@@ -11,7 +40,18 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
     });
   };
 
+  function checksearch(results) {
+    if (results.length === 0){
+      $scope.noResultsFound = true;
+    } else {
+      $scope.noResultsFound = false;
+    }
+  };
+
+  $scope.noResultsFound = false;
+
   $scope.search = function() {
+    $scope.noSearch = false;
     var searchTerm = $scope.searchTerm;
     $scope.rightPane = "assets/images/euro-money.png";
     $scope.searchResults = [];
@@ -27,16 +67,23 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
         })
       }
       $scope.searchResults = $.unique($scope.searchResults)
+      checksearch($scope.searchResults);
+    } else {
+      $scope.noSearch = true;
+      $scope.noResultsFound = false;
+      $scope.rightTitle = 'Company News';
+
     }
   }
 
 
-
-
 $scope.clearSearch = function() {
+  $scope.noSearch = true;
+  $scope.noResultsFound = false;
   $scope.searchResults = [];
   $scope.searchTerm = "";
   $scope.rightPane = "assets/images/euro-money.png";
+  $scope.rightTitle = "Company News";
   };
 
 
@@ -68,13 +115,15 @@ $scope.clearSearch = function() {
   })
 
 
-  $scope.openImage = function(location) {
+  $scope.openImage = function(location, first_name, last_name, desk) {
     $scope.rightPane = location;
+    $scope.rightTitle = first_name + ' ' + last_name + ', Desk: ' + desk;
   }
 
-  $scope.documentClick = function(location, download) {
+  $scope.documentClick = function(location, download, title, department) {
     if (download === false) {
       $scope.rightPane = window.location.href + location;
+      $scope.rightTitle = title + ', Department: ' + department;
     }
   }
 
