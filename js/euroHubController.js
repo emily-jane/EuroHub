@@ -11,6 +11,7 @@ euroHubModule.controller('EuroHubController', ['$scope', 'hubSearchFactory', fun
 
   $scope.search = function() {
     var searchTerm = $scope.searchTerm;
+    $scope.rightPane = "assets/images/euro-money.png";
     $scope.searchResults = [];
 
     if (searchTerm.length > 0) {
