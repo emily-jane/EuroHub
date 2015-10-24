@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+// var Twitter = require('twitter-node-client').Twitter;
+
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -22,10 +24,10 @@ app.use('/js', express.static(__dirname + '/js'));
 // set the home page route
 app.get('/', function(req, res) {
 
-    // ejs render automatically looks in the views
-    res.render('index');
+  // ejs render automatically looks in the views
+  res.render('index');
 });
 
 app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
+  console.log('Our app is running on http://localhost:' + port);
 });

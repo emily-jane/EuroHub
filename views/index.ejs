@@ -14,9 +14,11 @@
   <script src="js/app.js"></script>
   <script src="js/euroHubController.js"></script>
   <script src="js/hubSearchFactory.js"></script>
+  <script src="bower_components/oauth-js/dist/oauth.js"></script>
 </head>
 
 <body ng-controller="EuroHubController as ctrl">
+  <button type="button" name="button" ng-click="twittersearch()">Twitter</button>
   <div class="ui stackable two column grid">
     <div class="six wide column">
       <div class="ui menu">

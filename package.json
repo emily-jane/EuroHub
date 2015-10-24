@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "postinstall": "bower install && gulp build"
-
   },
   "repository": {
     "type": "git",
@@ -53,6 +52,7 @@
     "require-dot-file": "^0.4.0",
     "run-sequence": "^1.1.4",
     "semantic-ui": "^2.1.4",
+    "twitter-node-client": "0.0.6",
     "yamljs": "^0.2.4"
   },
   "devDependencies": {

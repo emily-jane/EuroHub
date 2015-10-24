@@ -16,7 +16,8 @@
   "dependencies": {
     "angular": "~1.4.7",
     "angular-resource": "~1.4.7",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "oauth-js": "~0.4.4"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.7",
