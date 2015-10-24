@@ -191,7 +191,8 @@ select.ui.dropdown {
 
 .logo {
   padding: 0 10px 10px 10px !important;
-  width: 150px !important;  
+  width: 150px !important;
+  cursor: pointer;
 }
 
 .fa.fa-search {
