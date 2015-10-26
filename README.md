@@ -1,6 +1,11 @@
 # EuroHub
 
-Eurohub was built as part of Euromoney's Techsprint 2015 hackathon competition. It was designed to alleviate many of the problems associated with cumbersome and ill-designed intranets by providing an intuititve search function alongside a dynamically loaded single page app.
+Eurohub was built as part of Euromoney's Techsprint 2015 hackathon competition. It was designed to alleviate many of the problems associated with cumbersome and ill-designed intranets by providing an intuitive search function alongside a dynamically loaded single page app.
+
+[<img src="https://avatars2.githubusercontent.com/u/7063028?v=3&s=50"> ](https://github.com/ljones140)[<img src="https://avatars2.githubusercontent.com/u/12451318?v=3&s=50"> ](https://github.com/Teeohbee)
+[<img src="https://avatars2.githubusercontent.com/u/12625493?v=3&s=50"> ](https://github.com/emily-jane)
+[<img src="https://avatars2.githubusercontent.com/u/13018995?v=3&s=50"> ](https://github.com/ojlamb)
+
 
 ## Installation
 1. Clone the repo and cd into it.
@@ -11,9 +16,6 @@ Eurohub was built as part of Euromoney's Techsprint 2015 hackathon competition. 
 
 Alternatively, check out our deployed version on heroku:  
 http://euro-hub.herokuapp.com/
-
-## Usage
-TODO: Write usage instructions
 
 ## Contributing
 1. Fork it!
