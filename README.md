@@ -8,7 +8,7 @@ Eurohub was built as part of Euromoney's Techsprint 2015 hackathon competition. 
 2. Run `npm install` on the terminal.
 3. Run `gulp build` on the terminal.
 4. Run `npm start` on the terminal.
-5. Load up the web-app on `http://localhost:8080`
+5. Load up the web app on `http://localhost:8080`
 
 Alternatively, check out our deployed version on heroku:  
 http://euro-hub.herokuapp.com/
